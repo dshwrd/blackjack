@@ -1,0 +1,13 @@
+export const DEFAULT_PLAYER_HAND_SIZE = 2;
+export const PLAYER_CARD_Y_POSTION = -150;
+export const DEALER_CARD_Y_POSITION = 150;
+export const PLAYER_CARD_X_POSITION = 120;
+export const DEALER_CARD_X_POSITION = 120;
+export const PLAYER_CARD_X_OFFSET = 120
+export const DEALER_CARD_X_OFFSET = 120
+
+export const OFFSCREEN_CARD_POSITION_X = 400;
+export const OFFSCREEN_CARD_POSITION_Y = 400;
+export const CARD_POSITION_Y = 10;
+
+export const DEALER_MAX_HAND_VALUE = 17;

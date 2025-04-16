@@ -1,0 +1,107 @@
+images:
+  - name: card_back
+    path: /images/cardBack.png
+  - name: ace_of_spades
+    path: /images/cards/ace_of_spades.png
+  - name: 2_of_spades
+    path: /images/cards/2_of_spades.png
+  - name: 3_of_spades
+    path: /images/cards/3_of_spades.png
+  - name: 4_of_spades
+    path: /images/cards/4_of_spades.png
+  - name: 5_of_spades
+    path: /images/cards/5_of_spades.png
+  - name: 6_of_spades
+    path: /images/cards/6_of_spades.png
+  - name: 7_of_spades
+    path: /images/cards/7_of_spades.png
+  - name: 8_of_spades
+    path: /images/cards/8_of_spades.png
+  - name: 9_of_spades
+    path: /images/cards/9_of_spades.png
+  - name: 10_of_spades
+    path: /images/cards/10_of_spades.png
+  - name: jack_of_spades
+    path: /images/cards/jack_of_spades.png
+  - name: queen_of_spades
+    path: /images/cards/queen_of_spades.png
+  - name: king_of_spades
+    path: /images/cards/king_of_spades.png
+  - name: ace_of_hearts
+    path: /images/cards/ace_of_hearts.png
+  - name: 2_of_hearts
+    path: /images/cards/2_of_hearts.png
+  - name: 3_of_hearts
+    path: /images/cards/3_of_hearts.png
+  - name: 4_of_hearts
+    path: /images/cards/4_of_hearts.png
+  - name: 5_of_hearts
+    path: /images/cards/5_of_hearts.png
+  - name: 6_of_hearts
+    path: /images/cards/6_of_hearts.png
+  - name: 7_of_hearts
+    path: /images/cards/7_of_hearts.png
+  - name: 8_of_hearts
+    path: /images/cards/8_of_hearts.png
+  - name: 9_of_hearts
+    path: /images/cards/9_of_hearts.png
+  - name: 10_of_hearts
+    path: /images/cards/10_of_hearts.png
+  - name: jack_of_hearts
+    path: /images/cards/jack_of_hearts.png
+  - name: queen_of_hearts
+    path: /images/cards/queen_of_hearts.png
+  - name: king_of_hearts
+    path: /images/cards/king_of_hearts.png
+  - name: ace_of_diamonds
+    path: /images/cards/ace_of_diamonds.png
+  - name: 2_of_diamonds
+    path: /images/cards/2_of_diamonds.png
+  - name: 3_of_diamonds
+    path: /images/cards/3_of_diamonds.png
+  - name: 4_of_diamonds
+    path: /images/cards/4_of_diamonds.png
+  - name: 5_of_diamonds
+    path: /images/cards/5_of_diamonds.png
+  - name: 6_of_diamonds
+    path: /images/cards/6_of_diamonds.png
+  - name: 7_of_diamonds
+    path: /images/cards/7_of_diamonds.png
+  - name: 8_of_diamonds
+    path: /images/cards/8_of_diamonds.png
+  - name: 9_of_diamonds
+    path: /images/cards/9_of_diamonds.png
+  - name: 10_of_diamonds
+    path: /images/cards/10_of_diamonds.png
+  - name: jack_of_diamonds
+    path: /images/cards/jack_of_diamonds.png
+  - name: queen_of_diamonds
+    path: /images/cards/queen_of_diamonds.png
+  - name: king_of_diamonds
+    path: /images/cards/king_of_diamonds.png
+  - name: ace_of_clubs
+    path: /images/cards/ace_of_clubs.png
+  - name: 2_of_clubs
+    path: /images/cards/2_of_clubs.png
+  - name: 3_of_clubs
+    path: /images/cards/3_of_clubs.png
+  - name: 4_of_clubs
+    path: /images/cards/4_of_clubs.png
+  - name: 5_of_clubs
+    path: /images/cards/5_of_clubs.png
+  - name: 6_of_clubs
+    path: /images/cards/6_of_clubs.png
+  - name: 7_of_clubs
+    path: /images/cards/7_of_clubs.png
+  - name: 8_of_clubs
+    path: /images/cards/8_of_clubs.png
+  - name: 9_of_clubs
+    path: /images/cards/9_of_clubs.png
+  - name: 10_of_clubs
+    path: /images/cards/10_of_clubs.png
+  - name: jack_of_clubs
+    path: /images/cards/jack_of_clubs.png
+  - name: queen_of_clubs
+    path: /images/cards/queen_of_clubs.png
+  - name: king_of_clubs
+    path: /images/cards/king_of_clubs.png
