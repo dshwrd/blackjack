@@ -5,20 +5,14 @@ import { IState } from '../states/IState';
 import { PlayerState } from '../states/PlayerState';
 import { SetupState } from '../states/SetupState';
 
-export enum States {
-    SETUP = 'SetupState',
-    DEAL = 'DealState',
-    PLAYER = 'PlayerState',
-    DEALER = 'DealerState',
-    GAME_OVER = 'GameOverState'
-}
-
 /**
  * @description StateManager is responsible for managing the current state of the game.
  */
 export class StateManager {
     private static instance: StateManager | null = null;
+    // In a production game, the states would be in a config file. For this test, we are hardcoding them.
     private stateList: IState[] = [new SetupState(), new DealState(), new PlayerState(), new DealerState(), new GameOverState()];
+    // The current state of the game. This is set when the state changes.
     private currentState: IState | null = null;
 
     public static getInstance(): StateManager {
@@ -45,10 +39,17 @@ export class StateManager {
         }
     }
 
+    /**
+     * @description Returns the current state of the game. This is useful for checking the current state in other parts of the code.
+     * @returns The current state of the game.
+     */
     public getCurrentState(): IState | null {
         return this.currentState;
     }
 
+    /**
+     * @description Moves onto the next state in the state list.
+     */
     nextState(): void {
         const currentIndex = this.stateList.indexOf(this.currentState!);
         const nextIndex = (currentIndex + 1) % this.stateList.length;

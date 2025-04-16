@@ -1,7 +1,7 @@
 import gsap from 'gsap';
 import * as THREE from 'three';
 import { AssetManager } from '../managers/AssetManager';
-import { CARD_POSITION_Y, OFFSCREEN_CARD_POSITION_X, OFFSCREEN_CARD_POSITION_Y } from './Constants';
+import { CARD_POSITION_Z, OFFSCREEN_CARD_POSITION_X, OFFSCREEN_CARD_POSITION_Y } from './Constants';
 
 const cardWidth = 500;
 const cardHeight = 726;
@@ -10,9 +10,17 @@ const cardScaleX = 0.2;
 const cardScaleY = 0.2;
 const cardScaleZ = 1;
 
+/**
+ * @description CardHelper is a class that provides methods to create and animate the card meshes.
+ * @description It uses Three.js for 3D rendering and GSAP for animations.
+ */
 export class CardHelper {
     private static instance: CardHelper;
 
+    /**
+     * @description A simple singleton for ease of use.
+     * @returns {CardHelper} - Returns the singleton instance of CardHelper.
+     */
     public static getInstance(): CardHelper {
         if (!CardHelper.instance) {
             CardHelper.instance = new CardHelper();
@@ -20,6 +28,11 @@ export class CardHelper {
         return CardHelper.instance;
     }
 
+    /**
+     * @description Used to grab a card mesh.
+     * @param card - The card name in the format "cardValue_of_cardSuit".
+     * @returns The created card mesh.
+     */
     public getCardMesh(card: string): THREE.Mesh {
         const cardName = card.split('_')[0];
         const suit = card.split('_')[2];
@@ -27,7 +40,14 @@ export class CardHelper {
         return this.createCardMesh(cardName, suit);
     }
 
+    /**
+     * @description Creates a card mesh using the provided card value and suit.
+     * @param cardValue 
+     * @param cardSuit 
+     * @returns 
+     */
     private createCardMesh(cardValue: string, cardSuit: string): THREE.Mesh {
+        // The back of the card texture
         const backTexture = AssetManager.getInstance().getImage('card_back');
         if (!backTexture) {
             console.log('Missing card_back texture.');
@@ -62,13 +82,16 @@ export class CardHelper {
         // Sets a scale for the cards (I just did this by hand, but it should be in the config file somewhere)
         cardMesh.scale.set(cardScaleX, cardScaleY, cardScaleZ);
         // 400, 400 is just a placeholder for the position of the card (this would be in a config as well)
-        cardMesh.position.set(OFFSCREEN_CARD_POSITION_X, OFFSCREEN_CARD_POSITION_Y, CARD_POSITION_Y);
+        cardMesh.position.set(OFFSCREEN_CARD_POSITION_X, OFFSCREEN_CARD_POSITION_Y, CARD_POSITION_Z);
         // Always create the cards facing down
         cardMesh.rotation.set(0, Math.PI, 0);
 
         return cardMesh;
     }
 
+    /**
+     * @description Animates the card mesh to a specified position and flips it if needed.
+     */
     animateCard(cardMesh: THREE.Mesh, xPosition: number, yPosition: number, callback: Function , shouldFlip: boolean = true): void {
         if (cardMesh === null || cardMesh === undefined) {
             throw new Error('Card mesh is null or undefined');

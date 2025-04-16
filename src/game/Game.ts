@@ -1,12 +1,16 @@
 import * as THREE from 'three';
 import { Deck } from './cards/Deck';
-import { Dealer } from './player/Dealer';
 import { Player } from './player/Player';
 
+/**
+ * @description Singleton class that helps manage the different elements of the game
+ * @description (e.g. scene, dealer, player, deck). Has some helper functions to
+ * @description help manage the game.
+ */
 export class Game {
     private static instance: Game;
     private scene!: THREE.Scene;
-    private dealer!: Dealer;
+    private dealer!: Player;
     private player!: Player;
     private deck!: Deck;
 
@@ -21,6 +25,9 @@ export class Game {
         return Game.instance;
     }
 
+    /**
+     * @description Reset all elements of the game.
+     */
     resetGame(): void {
         // Reset the dealer
         if (this.dealer) {
@@ -45,10 +52,18 @@ export class Game {
         this.scene = scene;
     }
 
+    /**
+     * @description Helper function for getting the game scene.
+     * @returns {THREE.Scene} The scene for the game.
+     */
     getScene(): THREE.Scene {
         return this.scene;
     }
 
+    /**
+     * @description Helper function for getting the game deck.
+     * @returns {Deck} The deck for the game.
+     */
     getDeck(): Deck {
         return this.deck;
     }
@@ -57,18 +72,35 @@ export class Game {
         this.deck = deck;
     }
 
-    getDealer(): Dealer {
+    /**
+     * @description Helper function for getting the dealer for the game.
+     * @description NOTE: The Dealer is just a Player class.
+     * @returns {Player} The dealer for the game.
+     */
+    getDealer(): Player {
         return this.dealer;
     }
 
-    setDealer(dealer: Dealer): void {
+    /**
+     * @description Set the dealer for the game.
+     * @param dealer The dealer object.
+     */
+    setDealer(dealer: Player): void {
         this.dealer = dealer;
     }
 
+    /**
+     * @description Helper function for getting the player for the game.
+     * @returns {Player} The player for the game.
+     */
     getPlayer(): Player {
         return this.player;
     }
 
+    /**
+     * @description Set the player for the game.
+     * @param player The player object.
+     */
     setPlayer(player: Player): void {
         this.player = player;
     }

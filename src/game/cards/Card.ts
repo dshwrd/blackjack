@@ -5,6 +5,11 @@ export class Card {
     private suit: string;
     private value: string;
 
+    /**
+     * @description Constructor, just assigns the suit and value to the card.
+     * @param suit The suite of the card.
+     * @param value The value of the card.
+     */
     constructor(suit: string, value: string) {
         this.suit = suit;
         this.value = value;

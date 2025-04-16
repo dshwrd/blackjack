@@ -1,6 +1,9 @@
 import yaml from 'js-yaml';
 import * as THREE from 'three';
 
+/**
+ * @description A simple asset manager for loading images and YAML files.
+ */
 export class AssetManager {
     private static instance: AssetManager;
     private images: Map<string, THREE.Texture>;

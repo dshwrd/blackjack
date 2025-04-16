@@ -1,12 +1,16 @@
 import { Card } from './Card';
 
+/**
+ * @description The deck class that is used for dealing cards.
+ */
 export class Deck {
     private cards: Card[];
 
     /**
-     *  I went with 1 standard 52 card deck for this game of blackjack. 
-     *  Normally I would make a shoe class with an input of X amount of 
-     *  decks for a production level game.
+     * I went with 1 standard 52 card deck for this game of blackjack. 
+     * Normally, for a production level game, I would make a shoe class 
+     * with an input of X amount of decks. But that wasn't needed for
+     * this test.
      */
 
     constructor() {
@@ -33,7 +37,6 @@ export class Deck {
 
     /**
      * @description Shuffles the deck of cards.
-     * @returns {void}
      */
     public shuffle(): void {
         for (let i = this.cards.length - 1; i > 0; i--) {
@@ -55,6 +58,9 @@ export class Deck {
         return this.cards.pop()!;
     }
 
+    /**
+     * @description Reset the cards! And then create the deck again.
+     */
     public reset(): void {
         this.cards = [];
         this.cards = this.createDeck();

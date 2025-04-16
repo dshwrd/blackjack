@@ -16,6 +16,10 @@ export class Player {
         this.cardMeshes = [];
     }
 
+    /**
+     * @description A method to get the player's hand.
+     * @returns The player's hand.
+     */
     public getHand(): Hand {
         return this.hand;
     }
@@ -35,14 +39,33 @@ export class Player {
         this.standing = true;
     }
 
+    /**
+     * @description A way to check if the player is standing or not.
+     * @returns If the player is standing or not.
+     */
+    public isStanding(): boolean {
+        return this.standing;
+    }
+
+    /**
+     * 
+     * @param mesh The new card mesh to add to the array
+     */
     public addCardMesh(mesh: THREE.Mesh): void {
         this.cardMeshes.push(mesh);
     }
 
+    /**
+     * @description Method for getting all of the card meshes (for if we need to do something to a card, rotate, move, etc)
+     * @returns All of the card meshes in the array
+     */
     public getCardMeshes(): THREE.Mesh[] {
         return this.cardMeshes;
     }
 
+    /**
+     * @description Reset everything! And remove all the card meshes.
+     */
     public reset(): void {
         this.standing = false;
         this.hand.reset();
@@ -51,9 +74,5 @@ export class Player {
             mesh.geometry.dispose();
         });
         this.cardMeshes = [];
-    }
-
-    public isStanding(): boolean {
-        return this.standing;
     }
 }

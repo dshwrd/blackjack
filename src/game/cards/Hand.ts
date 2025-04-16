@@ -1,5 +1,8 @@
 import { Card } from './Card';
 
+/**
+ * @description The hand class for the game, stores the cards for the players.
+ */
 export class Hand {
     private cards: Card[];
     
@@ -73,6 +76,9 @@ export class Hand {
         return this.cards.map(card => card.getCardName()).join(', ');
     }
 
+    /**
+     * @description Resets the cards (empties the array).
+     */
     public reset():void {
         this.cards = [];
     }
