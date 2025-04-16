@@ -44,6 +44,7 @@ export class SetupState implements IState {
      * @param event StateGameEvent
      */
     public startGame(event: Event): void {
+        console.log('StartGameEvent: ' + event.type);
         StateManager.getInstance().nextState();
     }
 
