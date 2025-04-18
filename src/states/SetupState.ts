@@ -1,5 +1,6 @@
 import StartGameEvent from '../events/StartGameEvent';
 import { Deck } from '../game/cards/Deck';
+import { Dealer } from '../game/Dealer/Dealer';
 import { Game } from '../game/Game';
 import { Player } from '../game/player/Player';
 import { StateManager } from '../managers/StateManager';
@@ -25,7 +26,7 @@ export class SetupState implements IState {
         if (!this.gameSetup) {
             Game.getInstance().setDeck(new Deck());
             Game.getInstance().setPlayer(new Player());
-            Game.getInstance().setDealer(new Player());
+            Game.getInstance().setDealer(new Dealer());
             this.gameSetup = true;
         }
         

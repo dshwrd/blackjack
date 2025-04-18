@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { Deck } from './cards/Deck';
 import { Player } from './player/Player';
+import { Dealer } from './Dealer/Dealer';
 
 /**
  * @description Singleton class that helps manage the different elements of the game
@@ -11,7 +12,7 @@ export class Game {
     private static instance: Game;
     private scene!: THREE.Scene;
     private dealer!: Player;
-    private player!: Player;
+    private player!: Dealer;
     private deck!: Deck;
 
     /**
@@ -75,9 +76,9 @@ export class Game {
     /**
      * @description Helper function for getting the dealer for the game.
      * @description NOTE: The Dealer is just a Player class.
-     * @returns {Player} The dealer for the game.
+     * @returns {Dealer} The dealer for the game.
      */
-    getDealer(): Player {
+    getDealer(): Dealer {
         return this.dealer;
     }
 
@@ -85,7 +86,7 @@ export class Game {
      * @description Set the dealer for the game.
      * @param dealer The dealer object.
      */
-    setDealer(dealer: Player): void {
+    setDealer(dealer: Dealer): void {
         this.dealer = dealer;
     }
 
